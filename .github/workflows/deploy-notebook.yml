@@ -115,7 +115,7 @@ jobs:
       run: |
         DEST_HOST=${{ secrets.DATABRICKS_DEST_HOST }}
         DEST_TOKEN=${{ secrets.DATABRICKS_DEST_TOKEN }}
-        DEST_BASE="/py/scripts/main"
+        DEST_BASE="/test12/scripts/main"
         CLUSTER_ID="${{ env.CLUSTER_ID }}"
         
         echo "Creando workflow: WF_ADB con cluster existente ID: $CLUSTER_ID"
@@ -130,7 +130,7 @@ jobs:
               "task_key": "tarea1_notebook1",
               "description": "Ejecuta notebook ntbk_1",
               "notebook_task": {
-                "notebook_path": "/py/scripts/main/ntbk_1",
+                "notebook_path": "/test12/scripts/main/ntbk_1",
                 "source": "WORKSPACE"
               },
               "existing_cluster_id": "$CLUSTER_ID",
@@ -141,7 +141,7 @@ jobs:
               "task_key": "tarea2_notebook2",
               "description": "Ejecuta notebook ntbk_2",
               "notebook_task": {
-                "notebook_path": "/py/scripts/main/ntbk_2",
+                "notebook_path": "/test12/scripts/main/ntbk_2",
                 "source": "WORKSPACE"
               },
               "existing_cluster_id": "$CLUSTER_ID",
